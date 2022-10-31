@@ -1,0 +1,212 @@
+---
+
+- name: Download dotfiles
+  get_url:
+    url: https://github.com/carvalhudo/configs/archive/refs/heads/void.zip
+    dest: "{{ global.dotfiles_path }}.zip"
+
+- name: Extract dotfiles
+  unarchive:
+    remote_src: yes
+    src: "{{ global.dotfiles_path }}.zip"
+    dest: "/home/{{ global.user }}/downloads" # TODO: change dest
+
+- name: Deploy tmux config
+  file:
+    src: "{{ global.dotfiles_path }}/tmux/.tmux.conf"
+    dest: "/home/{{ global.user }}/.tmux.conf"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+
+- name: Deploy neovim config
+  file:
+    src: "{{ global.dotfiles_path }}/nvim/{{ item }}"
+    dest: "/home/{{ global.user }}/.config/nvim/{{ item }}"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+  with_items:
+    - init.vim
+    - colors/zenburn.vim
+
+- name: Deploy i3 config
+  file:
+    src: "{{ global.dotfiles_path }}/i3/config"
+    dest: "/home/{{ global.user }}/.config/i3/config"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+
+- name: Deploy i3blocks config
+  become: true
+  become_user: root
+  file:
+    src: "{{ global.dotfiles_path }}/i3/i3blocks/i3blocks.conf"
+    dest: "/etc/i3blocks.conf"
+    state: link
+    force: yes
+
+- name: Deploy newsboat config
+  file:
+    src: "{{ global.dotfiles_path }}/newsboat/{{ item }}"
+    dest: "/home/{{ global.user }}/.newsboat/{{ item }}"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+  with_items:
+    - config
+    - urls
+
+- name: Deploy ranger config
+  file:
+    src: "{{ global.dotfiles_path }}/ranger/{{ item }}"
+    dest: "/home/{{ global.user }}/.config/ranger/{{ item }}"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+  with_items:
+    - commands.py
+    - rc.conf
+
+- name: Deploy qutebrowser config
+  file:
+    src: "{{ global.dotfiles_path }}/qutebrowser/{{ item }}"
+    dest: "/home/{{ global.user }}/.config/qutebrowser/{{ item }}"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+  with_items:
+    - config.py
+    - quickmarks
+
+- name: Deploy rofi config
+  file:
+    src: "{{ global.dotfiles_path }}/rofi/config.rasi"
+    dest: "/home/{{ global.user }}/.config/rofi/config.rasi"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+
+- name: Deploy urxvt config
+  file:
+    src: "{{ global.dotfiles_path }}/urxvt/.Xresources"
+    dest: "/home/{{ global.user }}/.Xresources"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+
+- name: Deploy xfce4-terminal config
+  file:
+    src: "{{ global.dotfiles_path }}/xfce4_terminal/terminalrc"
+    dest: "/home/{{ global.user }}/.config/xfce4/terminal/terminalrc"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+    force: yes
+    # TODO: remove default font or install it before
+
+- name: Deploy nitrogen config
+  file:
+    src: "{{ global.dotfiles_path }}/nitrogen/{{ item }}"
+    dest: "/home/{{ global.user }}/.config/nitrogen/{{ item }}"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+  with_items:
+    - bg-saved.cfg
+    - nitrogen.cfg
+
+- name: Deploy bash config
+  file:
+    src: "{{ global.dotfiles_path }}/bash/{{ item }}"
+    dest: "/home/{{ global.user }}/{{ item }}"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+    force: yes
+  with_items:
+    - .bash_aliases
+    - .bashrc
+
+- name: Deploy .env config
+  file:
+    src: "{{ global.dotfiles_path }}/system/.env"
+    dest: "/home/{{ global.user }}/.env"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+
+- name: Deploy .profile config
+  file:
+    src: "{{ global.dotfiles_path }}/system/.profile"
+    dest: "/home/{{ global.user }}/.profile"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+
+# TODO: improve this by using symbolic link
+- name: Deploy lightdm config
+  become: true
+  become_user: root
+  copy:
+    remote_src: yes
+    src: "{{ global.dotfiles_path }}/lightdm/lightdm-gtk-greeter.conf"
+    dest: "/etc/lightdm/lightdm-gtk-greeter.conf"
+    owner: root
+    group: root
+    force: yes
+
+- name: Deploy resources
+  file:
+    src: "{{ global.dotfiles_path }}/resources/images/{{ item }}"
+    dest: "/home/{{ global.user }}/images/{{ item }}"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+  with_items:
+    - bg.png
+    - avatar.jpg
+    - wallpaper.jpg
+
+- name: Deploy lightdm resources
+  become: true
+  become_user: root
+  copy:
+    remote_src: yes
+    src: "{{ global.dotfiles_path }}/resources/images/avatar.jpg"
+    dest: "/opt/lightdm/resources/avatar.jpg" # TODO: change this directory
+    owner: root
+    group: root
+
+- name: Deploy tmuxp files
+  file:
+    src: "{{ global.dotfiles_path }}/tmux/.tmuxp/"
+    dest: "/home/{{ global.user }}/.tmuxp"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+
+- name: Deploy scripts
+  file:
+    src: "{{ global.dotfiles_path }}/scripts"
+    dest: "/home/{{ global.user }}/.scripts"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+    mode: '755'
+
+- name: Deploy i3blocks scripts
+  file:
+    src: "{{ global.dotfiles_path }}/i3/i3blocks/scripts"
+    dest: "/home/{{ global.user }}/.scripts/i3blocks"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+    mode: '755'
+
+# TODO: deploy zathura config
+# TODO: deploy betterlockscreen config
+# TODO: enable network-manager service
+
+...

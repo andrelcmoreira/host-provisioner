@@ -16,4 +16,12 @@
     dest: "/var/service/lightdm"
     state: link
 
+- name: Enable NetworkManager service
+  become: true
+  become_user: root
+  file:
+    src: "/etc/sv/NetworkManager"
+    dest: "/var/service/NetworkManager"
+    state: link
+
 ...

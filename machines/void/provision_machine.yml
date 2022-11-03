@@ -6,6 +6,6 @@
    - setup_home
    - install_pkgs
    - install_dotfiles
-   - setup_graphics
+   - setup_services
 
 ...

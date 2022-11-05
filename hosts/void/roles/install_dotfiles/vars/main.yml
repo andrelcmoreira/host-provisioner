@@ -1,0 +1,7 @@
+---
+
+global:
+  dotfiles_path: /home/andre/dev/projects/configs
+  user: andre
+
+...

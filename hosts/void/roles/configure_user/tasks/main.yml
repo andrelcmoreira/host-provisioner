@@ -1,0 +1,8 @@
+---
+
+- name: Add user to groups
+  become: true
+  become_user: root
+  shell: usermod -aG network {{ global.user }}
+
+...

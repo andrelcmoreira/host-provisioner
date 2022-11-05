@@ -1,0 +1,29 @@
+---
+
+- name: Configure git editor
+  git_config:
+    name: core.editor
+    scope: global
+    value: nvim
+
+- name: Configure git user
+  git_config:
+    name: user.name
+    scope: global
+    value: "André L. C. Moreira"
+
+- name: Configure git email
+  git_config:
+    name: user.email
+    scope: global
+    value: alcm99@gmail.com
+
+- name: Clone configs repo
+  git:
+    repo: "https://github.com/carvalhudo/configs.git"
+    dest: "{{ global.home_dir }}/dev/projects/configs"
+    version: void
+
+# TODO: clone via ssh
+# TODO: clone other repos
+...

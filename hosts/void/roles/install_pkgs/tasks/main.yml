@@ -56,6 +56,7 @@
       - alsa-utils
       - base-devel
       - betterlockscreen
+      - clang
       - font-awesome
       - gtk-theme-united-gnome
       - i3-gaps
@@ -65,9 +66,11 @@
       - network-manager-applet
       - newsboat
       - nitrogen
+      - nodejs
+      - python3-jedi
+      - python3-neovim
       - python3-pip
       - python3-tmuxp
-      - python3-neovim
       - recordmydesktop
       - scrot
       - setxkbmap
@@ -89,9 +92,10 @@
   shell: curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim \
          --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-#- name: Install neovim plugins
-#  shell: nvim -c 'PluginInstall | q | q'
+- name: Install neovim plugins
+  shell: nvim -c 'PlugInstall | q | q'
 
-# TODO: coc stuff
-# TODO: git configs
+- name: Install coc plugins
+  shell: nvim -c 'CocInstall -sync coc-clangd | CocInstall -sync coc-jedi | q | q | q'
+
 ...

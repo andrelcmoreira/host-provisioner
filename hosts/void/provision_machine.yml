@@ -5,7 +5,9 @@
   roles:
    - setup_home
    - install_pkgs
+   - setup_git
    - install_dotfiles
    - setup_services
+   - configure_user
 
 ...

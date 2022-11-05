@@ -36,6 +36,12 @@
     state: directory
     mode: '0755'
 
+- name: Creating projects directory
+  file:
+    path: "{{ global.home_dir }}/dev/projects/"
+    state: directory
+    mode: '0755'
+
 - name: Creating .config directory
   file:
     path: "{{ global.home_dir }}/.config"
@@ -90,6 +96,12 @@
 - name: Creating xfce4-terminal config directory
   file:
     path: "{{ global.home_dir }}/.config/xfce4/terminal"
+    state: directory
+    mode: '0755'
+
+- name: Creating zathura config directory
+  file:
+    path: "{{ global.home_dir }}/.config/zathura"
     state: directory
     mode: '0755'
 

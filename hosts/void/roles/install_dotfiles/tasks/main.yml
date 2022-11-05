@@ -1,16 +1,5 @@
 ---
 
-- name: Download dotfiles
-  get_url:
-    url: https://github.com/carvalhudo/configs/archive/refs/heads/void.zip
-    dest: "{{ global.dotfiles_path }}.zip"
-
-- name: Extract dotfiles
-  unarchive:
-    remote_src: yes
-    src: "{{ global.dotfiles_path }}.zip"
-    dest: "/home/{{ global.user }}/downloads" # TODO: change dest
-
 - name: Deploy tmux config
   file:
     src: "{{ global.dotfiles_path }}/tmux/.tmux.conf"
@@ -104,7 +93,6 @@
     group: "{{ global.user }}"
     state: link
     force: yes
-    # TODO: remove default font or install it before
 
 - name: Deploy nitrogen config
   file:
@@ -144,6 +132,15 @@
     owner: "{{ global.user }}"
     group: "{{ global.user }}"
     state: link
+
+- name: Deploy zathura config
+  file:
+    src: "{{ global.dotfiles_path }}/zathura/zathurarc"
+    dest: "/home/{{ global.user }}/.config/zathura/zathurarc"
+    owner: "{{ global.user }}"
+    group: "{{ global.user }}"
+    state: link
+    mode: '755'
 
 # TODO: improve this by using symbolic link
 - name: Deploy lightdm config
@@ -205,7 +202,6 @@
     state: link
     mode: '755'
 
-# TODO: deploy zathura config
 # TODO: deploy betterlockscreen config
 
 ...

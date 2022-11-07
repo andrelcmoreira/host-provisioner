@@ -9,6 +9,12 @@ The ```host-provisioner``` project contains a set of ansible playbooks targeted 
 - graphics configuration
 - general user configuration
 
+## Running the playbooks
+
+```bash
+$ cd hosts/<distro> && ansible-playbook -i <path_to_hosts_file> provision_host.yml -K
+```
+
 ## Supported hosts
 
 - void linux

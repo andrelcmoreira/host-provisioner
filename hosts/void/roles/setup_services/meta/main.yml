@@ -1,0 +1,7 @@
+---
+
+dependencies:
+  - role: install_pkgs
+  - role: install_dotfiles
+
+...

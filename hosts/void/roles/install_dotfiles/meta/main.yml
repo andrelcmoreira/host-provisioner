@@ -1,0 +1,8 @@
+---
+
+dependencies:
+  - role: setup_home
+  - role: setup_git
+  - role: install_pkgs
+
+...

@@ -1,0 +1,14 @@
+name: void
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  yaml_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Yaml coherence check
+        run: ansible-playbook hosts/void/provision_host.yml --syntax-check

@@ -3,7 +3,7 @@
 - name: Deploy tmux config
   file:
     src: "{{ dotfiles_path }}/tmux/.tmux.conf"
-    dest: "/home/{{ ansible_env.USER }}/.tmux.conf"
+    dest: "{{ ansible_env.HOME }}/.tmux.conf"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -11,7 +11,7 @@
 - name: Deploy neovim config
   file:
     src: "{{ dotfiles_path }}/nvim/{{ item }}"
-    dest: "/home/{{ ansible_env.USER }}/.config/nvim/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.config/nvim/{{ item }}"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -22,7 +22,7 @@
 - name: Deploy i3 config
   file:
     src: "{{ dotfiles_path }}/i3/config"
-    dest: "/home/{{ ansible_env.USER }}/.config/i3/config"
+    dest: "{{ ansible_env.HOME }}/.config/i3/config"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -39,7 +39,7 @@
 - name: Deploy newsboat config
   file:
     src: "{{ dotfiles_path }}/newsboat/{{ item }}"
-    dest: "/home/{{ ansible_env.USER }}/.newsboat/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.newsboat/{{ item }}"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -50,7 +50,7 @@
 - name: Deploy ranger config
   file:
     src: "{{ dotfiles_path }}/ranger/{{ item }}"
-    dest: "/home/{{ ansible_env.USER }}/.config/ranger/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.config/ranger/{{ item }}"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -61,7 +61,7 @@
 - name: Deploy qutebrowser config
   file:
     src: "{{ dotfiles_path }}/qutebrowser/{{ item }}"
-    dest: "/home/{{ ansible_env.USER }}/.config/qutebrowser/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.config/qutebrowser/{{ item }}"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -72,7 +72,7 @@
 - name: Deploy rofi config
   file:
     src: "{{ dotfiles_path }}/rofi/config.rasi"
-    dest: "/home/{{ ansible_env.USER }}/.config/rofi/config.rasi"
+    dest: "{{ ansible_env.HOME }}/.config/rofi/config.rasi"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -80,7 +80,7 @@
 - name: Deploy urxvt config
   file:
     src: "{{ dotfiles_path }}/urxvt/.Xresources"
-    dest: "/home/{{ ansible_env.USER }}/.Xresources"
+    dest: "{{ ansible_env.HOME }}/.Xresources"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -88,7 +88,7 @@
 - name: Deploy xfce4-terminal config
   file:
     src: "{{ dotfiles_path }}/xfce4_terminal/terminalrc"
-    dest: "/home/{{ ansible_env.USER }}/.config/xfce4/terminal/terminalrc"
+    dest: "{{ ansible_env.HOME }}/.config/xfce4/terminal/terminalrc"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -97,7 +97,7 @@
 - name: Deploy nitrogen config
   file:
     src: "{{ dotfiles_path }}/nitrogen/{{ item }}"
-    dest: "/home/{{ ansible_env.USER }}/.config/nitrogen/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.config/nitrogen/{{ item }}"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -108,7 +108,7 @@
 - name: Deploy bash config
   file:
     src: "{{ dotfiles_path }}/bash/{{ item }}"
-    dest: "/home/{{ ansible_env.USER }}/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/{{ item }}"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -120,7 +120,7 @@
 - name: Deploy .env config
   file:
     src: "{{ dotfiles_path }}/system/.env"
-    dest: "/home/{{ ansible_env.USER }}/.env"
+    dest: "{{ ansible_env.HOME }}/.env"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -128,7 +128,7 @@
 - name: Deploy .profile config
   file:
     src: "{{ dotfiles_path }}/system/.profile"
-    dest: "/home/{{ ansible_env.USER }}/.profile"
+    dest: "{{ ansible_env.HOME }}/.profile"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -136,7 +136,7 @@
 - name: Deploy zathura config
   file:
     src: "{{ dotfiles_path }}/zathura/zathurarc"
-    dest: "/home/{{ ansible_env.USER }}/.config/zathura/zathurarc"
+    dest: "{{ ansible_env.HOME }}/.config/zathura/zathurarc"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -157,7 +157,7 @@
 - name: Deploy resources
   file:
     src: "{{ dotfiles_path }}/resources/images/{{ item }}"
-    dest: "/home/{{ ansible_env.USER }}/images/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/images/{{ item }}"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -179,7 +179,7 @@
 - name: Deploy tmuxp files
   file:
     src: "{{ dotfiles_path }}/tmux/.tmuxp/"
-    dest: "/home/{{ ansible_env.USER }}/.tmuxp"
+    dest: "{{ ansible_env.HOME }}/.tmuxp"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -187,7 +187,7 @@
 - name: Deploy scripts
   file:
     src: "{{ dotfiles_path }}/scripts"
-    dest: "/home/{{ ansible_env.USER }}/.scripts"
+    dest: "{{ ansible_env.HOME }}/.scripts"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
@@ -196,7 +196,7 @@
 - name: Deploy i3blocks scripts
   file:
     src: "{{ dotfiles_path }}/i3/i3blocks/scripts"
-    dest: "/home/{{ ansible_env.USER }}/.scripts/i3blocks"
+    dest: "{{ ansible_env.HOME }}/.scripts/i3blocks"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link

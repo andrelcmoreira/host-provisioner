@@ -3,6 +3,6 @@
 - name: Add user to groups
   become: true
   become_user: root
-  shell: usermod -aG network {{ global.user }}
+  shell: usermod -aG network {{ ansible_env.USER }}
 
 ...

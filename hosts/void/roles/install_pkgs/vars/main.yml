@@ -1,0 +1,14 @@
+---
+
+pkgs_common: [bash, ctags, curl, docker, docker-compose, evince, firefox, fzf, gimp, git,
+              htop, i3blocks, lightdm, lightdm-gtk3-greeter, mpv, neofetch, qutebrowser,
+              ranger, rxvt-unicode, rofi, shellcheck, strace, tmux, wget, zathura]
+pkgs_void: [acpi, adwaita-qt, adwaita-plus, alsa-utils, base-devel, betterlockscreen,
+            clang, font-awesome, gtk-theme-united-gnome, i3-gaps, man-pages-devel,
+            man-pages-posix, neovim, network-manager-applet, newsboat, nitrogen, nodejs,
+            python3-jedi, python3-neovim, python3-pip, python3-tmuxp, recordmydesktop,
+            scrot, setxkbmap, telegram-desktop, texlive2020-bin, the_silver_searcher,
+            urxvt-perls, volumeicon, xbacklight, xclipboard, xfce4-terminal, xorg-fonts,
+            xorg-minimal, w3m-img, zathura-pdf-mupdf]
+
+...

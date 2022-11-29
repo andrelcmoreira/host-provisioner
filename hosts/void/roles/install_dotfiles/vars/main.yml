@@ -1,7 +1,5 @@
 ---
 
-global:
-  dotfiles_path: /home/andre/dev/projects/configs
-  user: andre
+dotfiles_path: "{{ ansible_env.HOME }}/dev/projects/configs"
 
 ...

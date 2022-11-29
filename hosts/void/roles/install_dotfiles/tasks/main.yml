@@ -2,143 +2,143 @@
 
 - name: Deploy tmux config
   file:
-    src: "{{ global.dotfiles_path }}/tmux/.tmux.conf"
-    dest: "/home/{{ global.user }}/.tmux.conf"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/tmux/.tmux.conf"
+    dest: "/home/{{ ansible_env.USER }}/.tmux.conf"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
 
 - name: Deploy neovim config
   file:
-    src: "{{ global.dotfiles_path }}/nvim/{{ item }}"
-    dest: "/home/{{ global.user }}/.config/nvim/{{ item }}"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/nvim/{{ item }}"
+    dest: "/home/{{ ansible_env.USER }}/.config/nvim/{{ item }}"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
-  with_items:
+  loop:
     - init.vim
     - colors/zenburn.vim
 
 - name: Deploy i3 config
   file:
-    src: "{{ global.dotfiles_path }}/i3/config"
-    dest: "/home/{{ global.user }}/.config/i3/config"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/i3/config"
+    dest: "/home/{{ ansible_env.USER }}/.config/i3/config"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
 
 - name: Deploy i3blocks config
   become: true
   become_user: root
   file:
-    src: "{{ global.dotfiles_path }}/i3/i3blocks/i3blocks.conf"
+    src: "{{ dotfiles_path }}/i3/i3blocks/i3blocks.conf"
     dest: "/etc/i3blocks.conf"
     state: link
     force: yes
 
 - name: Deploy newsboat config
   file:
-    src: "{{ global.dotfiles_path }}/newsboat/{{ item }}"
-    dest: "/home/{{ global.user }}/.newsboat/{{ item }}"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/newsboat/{{ item }}"
+    dest: "/home/{{ ansible_env.USER }}/.newsboat/{{ item }}"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
-  with_items:
+  loop:
     - config
     - urls
 
 - name: Deploy ranger config
   file:
-    src: "{{ global.dotfiles_path }}/ranger/{{ item }}"
-    dest: "/home/{{ global.user }}/.config/ranger/{{ item }}"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/ranger/{{ item }}"
+    dest: "/home/{{ ansible_env.USER }}/.config/ranger/{{ item }}"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
-  with_items:
+  loop:
     - commands.py
     - rc.conf
 
 - name: Deploy qutebrowser config
   file:
-    src: "{{ global.dotfiles_path }}/qutebrowser/{{ item }}"
-    dest: "/home/{{ global.user }}/.config/qutebrowser/{{ item }}"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/qutebrowser/{{ item }}"
+    dest: "/home/{{ ansible_env.USER }}/.config/qutebrowser/{{ item }}"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
-  with_items:
+  loop:
     - config.py
     - quickmarks
 
 - name: Deploy rofi config
   file:
-    src: "{{ global.dotfiles_path }}/rofi/config.rasi"
-    dest: "/home/{{ global.user }}/.config/rofi/config.rasi"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/rofi/config.rasi"
+    dest: "/home/{{ ansible_env.USER }}/.config/rofi/config.rasi"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
 
 - name: Deploy urxvt config
   file:
-    src: "{{ global.dotfiles_path }}/urxvt/.Xresources"
-    dest: "/home/{{ global.user }}/.Xresources"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/urxvt/.Xresources"
+    dest: "/home/{{ ansible_env.USER }}/.Xresources"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
 
 - name: Deploy xfce4-terminal config
   file:
-    src: "{{ global.dotfiles_path }}/xfce4_terminal/terminalrc"
-    dest: "/home/{{ global.user }}/.config/xfce4/terminal/terminalrc"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/xfce4_terminal/terminalrc"
+    dest: "/home/{{ ansible_env.USER }}/.config/xfce4/terminal/terminalrc"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
     force: yes
 
 - name: Deploy nitrogen config
   file:
-    src: "{{ global.dotfiles_path }}/nitrogen/{{ item }}"
-    dest: "/home/{{ global.user }}/.config/nitrogen/{{ item }}"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/nitrogen/{{ item }}"
+    dest: "/home/{{ ansible_env.USER }}/.config/nitrogen/{{ item }}"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
-  with_items:
+  loop:
     - bg-saved.cfg
     - nitrogen.cfg
 
 - name: Deploy bash config
   file:
-    src: "{{ global.dotfiles_path }}/bash/{{ item }}"
-    dest: "/home/{{ global.user }}/{{ item }}"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/bash/{{ item }}"
+    dest: "/home/{{ ansible_env.USER }}/{{ item }}"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
     force: yes
-  with_items:
+  loop:
     - .bash_aliases
     - .bashrc
 
 - name: Deploy .env config
   file:
-    src: "{{ global.dotfiles_path }}/system/.env"
-    dest: "/home/{{ global.user }}/.env"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/system/.env"
+    dest: "/home/{{ ansible_env.USER }}/.env"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
 
 - name: Deploy .profile config
   file:
-    src: "{{ global.dotfiles_path }}/system/.profile"
-    dest: "/home/{{ global.user }}/.profile"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/system/.profile"
+    dest: "/home/{{ ansible_env.USER }}/.profile"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
 
 - name: Deploy zathura config
   file:
-    src: "{{ global.dotfiles_path }}/zathura/zathurarc"
-    dest: "/home/{{ global.user }}/.config/zathura/zathurarc"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/zathura/zathurarc"
+    dest: "/home/{{ ansible_env.USER }}/.config/zathura/zathurarc"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
     mode: '755'
 
@@ -148,7 +148,7 @@
   become_user: root
   copy:
     remote_src: yes
-    src: "{{ global.dotfiles_path }}/lightdm/lightdm-gtk-greeter.conf"
+    src: "{{ dotfiles_path }}/lightdm/lightdm-gtk-greeter.conf"
     dest: "/etc/lightdm/lightdm-gtk-greeter.conf"
     owner: root
     group: root
@@ -156,12 +156,12 @@
 
 - name: Deploy resources
   file:
-    src: "{{ global.dotfiles_path }}/resources/images/{{ item }}"
-    dest: "/home/{{ global.user }}/images/{{ item }}"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/resources/images/{{ item }}"
+    dest: "/home/{{ ansible_env.USER }}/images/{{ item }}"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
-  with_items:
+  loop:
     - bg.png
     - avatar.jpg
     - wallpaper.jpg
@@ -171,34 +171,34 @@
   become_user: root
   copy:
     remote_src: yes
-    src: "{{ global.dotfiles_path }}/resources/images/avatar.jpg"
+    src: "{{ dotfiles_path }}/resources/images/avatar.jpg"
     dest: "/opt/lightdm/resources/avatar.jpg" # TODO: change this directory
     owner: root
     group: root
 
 - name: Deploy tmuxp files
   file:
-    src: "{{ global.dotfiles_path }}/tmux/.tmuxp/"
-    dest: "/home/{{ global.user }}/.tmuxp"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/tmux/.tmuxp/"
+    dest: "/home/{{ ansible_env.USER }}/.tmuxp"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
 
 - name: Deploy scripts
   file:
-    src: "{{ global.dotfiles_path }}/scripts"
-    dest: "/home/{{ global.user }}/.scripts"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/scripts"
+    dest: "/home/{{ ansible_env.USER }}/.scripts"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
     mode: '755'
 
 - name: Deploy i3blocks scripts
   file:
-    src: "{{ global.dotfiles_path }}/i3/i3blocks/scripts"
-    dest: "/home/{{ global.user }}/.scripts/i3blocks"
-    owner: "{{ global.user }}"
-    group: "{{ global.user }}"
+    src: "{{ dotfiles_path }}/i3/i3blocks/scripts"
+    dest: "/home/{{ ansible_env.USER }}/.scripts/i3blocks"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
     state: link
     mode: '755'
 

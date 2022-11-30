@@ -4,4 +4,8 @@
   import_tasks: os/void.yml
   when: ansible_distribution == "Void"
 
+- name: Install python packages
+  pip:
+    name: "{{ pkgs_python }}"
+
 ...

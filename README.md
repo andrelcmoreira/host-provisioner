@@ -14,7 +14,7 @@ The ```host-provisioner``` project contains a set of ansible playbooks targeted 
 ## Running the playbooks
 
 ```bash
-$ cd hosts/<distro> && ansible-playbook -i <path_to_hosts_file> provision_host.yml -K
+$ ansible-playbook -i <path_to_hosts_file> provision_host.yml -K
 ```
 
 ## Supported hosts

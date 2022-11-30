@@ -1,0 +1,7 @@
+---
+
+- name: Run void tasks
+  import_tasks: os/void.yml
+  when: ansible_distribution == "Void"
+
+...

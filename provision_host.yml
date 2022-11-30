@@ -1,6 +1,6 @@
 ---
 
-- name: Provision void host
+- name: Provision host
   hosts: void
   roles:
    - setup_home

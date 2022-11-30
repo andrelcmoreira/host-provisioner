@@ -18,11 +18,9 @@
     scope: global
     value: alcm99@gmail.com
 
-- name: Clone configs repo
-  git:
-    repo: "https://github.com/carvalhudo/configs.git"
-    dest: "{{ ansible_env.HOME }}/dev/projects/configs"
-    version: void
+- name: Run void tasks
+  import_tasks: os/void.yml
+  when: ansible_distribution == "Void"
 
 # TODO: clone via ssh
 # TODO: clone other repos

@@ -1,24 +1,8 @@
 ---
 
-- name: Sync package database
-  become: true
-  become_user: root
-  xbps:
-    update_cache: yes
-
-- name: Install common packages
-  become: true
-  become_user: root
-  xbps:
-    name: "{{ pkgs_common }}"
-    state: present
-
-- name: Install void packages
-  become: true
-  become_user: root
-  xbps:
-    name: "{{ pkgs_void }}"
-    state: present
+- name: Run void tasks
+  import_tasks: os/void.yml
+  when: ansible_distribution == "Void"
 
 - name: Install vim-plug
   shell: curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim \

@@ -3,12 +3,12 @@
 - name: Provision host
   hosts: void
   roles:
-#  - setup_home
-#  - install_pkgs
-#  - setup_git
+   - setup_home
+   - install_pkgs
+   - setup_git
    - install_dotfiles
-#  - configure_neovim
-#  - setup_services
-#  - configure_user
+   - configure_neovim
+   - setup_services
+   - configure_user
 
 ...

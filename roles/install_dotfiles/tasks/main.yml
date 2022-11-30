@@ -202,6 +202,13 @@
     state: link
     mode: '755'
 
-# TODO: deploy betterlockscreen config
+- name: Deploy betterlockscreen config
+  file:
+    src: "{{ dotfiles_path }}/betterlockscreen"
+    dest: "{{ ansible_env.HOME }}/.cache/betterlockscreen"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
+    state: link
+    mode: '755'
 
 ...

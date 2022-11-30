@@ -1,6 +1,6 @@
 # host-provisioner
 
-[![void](https://github.com/carvalhudo/host-provisioner/actions/workflows/void.yml/badge.svg)](https://github.com/carvalhudo/host-provisioner/actions/workflows/void.yml)
+[![ci](https://github.com/carvalhudo/host-provisioner/actions/workflows/ci.yml/badge.svg)](https://github.com/carvalhudo/host-provisioner/actions/workflows/ci.yml)
 
 ## Overview
 

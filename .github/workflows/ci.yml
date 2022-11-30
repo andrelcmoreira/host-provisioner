@@ -1,4 +1,4 @@
-name: void
+name: ci
 
 on:
   push:
@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Yaml coherence check
-        run: ansible-playbook hosts/void/provision_host.yml --syntax-check
+        run: ansible-playbook provision_host.yml --syntax-check

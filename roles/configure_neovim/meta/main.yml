@@ -1,0 +1,8 @@
+---
+
+dependencies:
+  - role: setup_home
+  - role: install_pkgs
+  - role: install_dotfiles
+
+...

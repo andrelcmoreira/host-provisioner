@@ -1,14 +1,14 @@
 ---
 
 - name: Provision host
-  hosts: void
+  hosts: ubuntu
   roles:
-   - setup_home
-   - install_pkgs
-   - setup_git
-   - install_dotfiles
-   - configure_neovim
-   - setup_services
-   - configure_user
+    - setup_home
+    - install_pkgs
+    - setup_git
+    - install_dotfiles
+    - configure_neovim
+    - setup_services
+    - configure_user
 
 ...

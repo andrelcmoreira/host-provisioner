@@ -1,15 +1,17 @@
 ---
 
-pkgs_common: [bash, ctags, curl, docker, docker-compose, evince, firefox, fzf, gimp, git,
-              htop, i3blocks, lightdm, lightdm-gtk3-greeter, mpv, neofetch, qutebrowser,
-              ranger, rxvt-unicode, rofi, shellcheck, strace, tmux, wget, zathura]
-pkgs_void: [acpi, adwaita-plus, alsa-utils, base-devel, betterlockscreen,
-            clang, font-awesome, gtk-theme-united-gnome, i3-gaps, man-pages-devel,
-            man-pages-posix, neovim, network-manager-applet, newsboat, nitrogen, nodejs,
-            python3-jedi, python3-pip, python3-tmuxp, recordmydesktop, scrot, setxkbmap,
-            telegram-desktop, texlive2020-bin, the_silver_searcher, urxvt-perls,
-            volumeicon, xbacklight, xclipboard, xfce4-terminal, xorg-fonts, xorg-minimal,
-            w3m-img, zathura-pdf-mupdf]
+pkgs_common: [acpi, bash, clang, ctags, curl, docker, docker-compose, evince, firefox, gimp,
+              git, htop, i3blocks, lightdm, mpv, neofetch, neovim, newsboat, nitrogen, python3-pip,
+              qutebrowser, ranger, rxvt-unicode, rofi, shellcheck, scrot, strace, tmux, wget,
+              xfce4-terminal, zathura]
+pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen, font-awesome, fzf,
+            gtk-theme-united-gnome, i3-gaps, lightdm-gtk3-greeter, man-pages-devel, man-pages-posix,
+            network-manager-applet, nodejs, python3-jedi, python3-tmuxp, recordmydesktop, setxkbmap,
+            telegram-desktop, texlive2020-bin, the_silver_searcher, urxvt-perls, volumeicon,
+            xbacklight, xclipboard, xorg-fonts, xorg-minimal, w3m-img, zathura-pdf-mupdf]
+pkgs_ubuntu: [lightdm-gtk-greeter, texlive-latex-base, texlive-fonts-recommended,
+              texlive-fonts-extra, texlive-latex-extra, build-essential, silversearcher-ag,
+              simplescreenrecorder, x11-apps]
 pkgs_python: [pynvim]
 
 ...

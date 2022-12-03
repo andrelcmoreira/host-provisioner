@@ -4,6 +4,10 @@
   import_tasks: os/void.yml
   when: ansible_distribution == "Void"
 
+- name: Run ubuntu tasks
+  import_tasks: os/ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+
 - name: Install python packages
   pip:
     name: "{{ pkgs_python }}"

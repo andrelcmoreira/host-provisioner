@@ -8,7 +8,7 @@ pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen, font-awesome
             gtk-theme-united-gnome, i3-gaps, lightdm-gtk3-greeter, man-pages-devel, man-pages-posix,
             neovim, network-manager-applet, nodejs, python3-jedi, python3-tmuxp, recordmydesktop, setxkbmap,
             telegram-desktop, texlive2020-bin, the_silver_searcher, urxvt-perls, volumeicon,
-            xbacklight, xclipboard, xorg-fonts, xorg-minimal, w3m-img, zathura-pdf-mupdf]
+            xbacklight, xclip, xorg-fonts, xorg-minimal, w3m-img, zathura-pdf-mupdf]
 pkgs_ubuntu: [build-essential, lightdm-gtk-greeter, neovim-runtime, neovim, silversearcher-ag,
               simplescreenrecorder, texlive-fonts-recommended, texlive-fonts-extra,
               texlive-latex-base, texlive-latex-extra, x11-apps]

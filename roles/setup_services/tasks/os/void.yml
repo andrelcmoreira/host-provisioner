@@ -24,4 +24,6 @@
     dest: "/var/service/NetworkManager"
     state: link
 
+# TODO: enable notifications service
+
 ...

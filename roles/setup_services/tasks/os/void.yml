@@ -24,7 +24,14 @@
     dest: "/var/service/NetworkManager"
     state: link
 
+- name: Enable docker service
+  become: true
+  become_user: root
+  file:
+    src: "/etc/sv/docker"
+    dest: "/var/service/docker"
+    state: link
+
 # TODO: enable notifications service
-# TODO: enable docker service
 
 ...

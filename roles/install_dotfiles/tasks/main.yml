@@ -211,5 +211,13 @@
     state: link
     mode: '755'
 
-# TODO: deploy volumeicon config
+- name: Deploy volumeicon config
+  file:
+    src: "{{ dotfiles_path }}/volumeicon"
+    dest: "{{ ansible_env.HOME }}/.config/volumeicon/volumeicon"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
+    state: link
+    mode: '755'
+
 ...

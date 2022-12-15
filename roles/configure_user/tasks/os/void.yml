@@ -3,8 +3,9 @@
 - name: Add user to groups
   become: true
   become_user: root
-  shell: usermod -aG network {{ ansible_env.USER }}
-
-# TODO: add user to docker group
+  shell: usermod -aG {{ item }} {{ ansible_env.USER }}
+  loop:
+    - network
+    - docker
 
 ...

@@ -5,4 +5,6 @@
   become_user: root
   shell: usermod -aG network {{ ansible_env.USER }}
 
+# TODO: add user to docker group
+
 ...

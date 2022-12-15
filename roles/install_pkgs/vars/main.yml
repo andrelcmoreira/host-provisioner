@@ -1,7 +1,7 @@
 ---
 
-pkgs_common: [acpi, bash, clang, ctags, curl, docker, docker-compose, evince, firefox, gimp,
-              git, htop, i3blocks, lightdm, mpv, neofetch, newsboat, nitrogen, python3-pip,
+pkgs_common: [acpi, ansible, bash, clang, ctags, curl, docker, docker-compose, evince, firefox,
+              gimp, git, htop, i3blocks, lightdm, mpv, neofetch, newsboat, nitrogen, python3-pip,
               qutebrowser, ranger, rxvt-unicode, rofi, shellcheck, scrot, strace, tmux, wget,
               xfce4-terminal, zathura]
 pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen, font-awesome, fzf,

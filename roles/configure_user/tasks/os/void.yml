@@ -8,4 +8,6 @@
     - network
     - docker
 
+# TODO: add user to sudoers file
+
 ...

@@ -1,15 +1,15 @@
 ---
 
-pkgs_common: [acpi, ansible, bash, clang, ctags, curl, docker, docker-compose, evince, firefox,
-              gimp, git, htop, i3blocks, lightdm, mpv, neofetch, newsboat, nitrogen, python3-pip,
-              qutebrowser, ranger, rxvt-unicode, rofi, shellcheck, scrot, strace, tmux, wget,
-              xfce4-terminal, zathura]
+pkgs_common: [acpi, ansible, bash, clang, cmake, ctags, curl, docker, docker-compose, evince,
+              firefox, gimp, git, htop, i3blocks, lightdm, mpv, neofetch, newsboat, nitrogen,
+              python3-pip, qutebrowser, ranger, rxvt-unicode, rofi, shellcheck, scrot, strace,
+              tmux, wget, xfce4-terminal, zathura]
 pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen, font-awesome, fzf,
             gtk-theme-united-gnome, i3-gaps, lightdm-gtk3-greeter, man-pages-devel, man-pages-posix,
-            neovim, network-manager-applet, nodejs, python3-jedi, python3-tmuxp, recordmydesktop, setxkbmap,
-            telegram-desktop, texlive-XeTeX, the_silver_searcher, urxvt-perls, volumeicon,
-            xbacklight, xclip, xhost, xorg-fonts, xorg-minimal, xprop, w3m-img, youtube-dl,
-            zathura-pdf-mupdf]
+            neovim, network-manager-applet, nodejs, python3-jedi, python3-tmuxp, recordmydesktop,
+            setxkbmap, telegram-desktop, texlive-XeTeX, the_silver_searcher, urxvt-perls,
+            volumeicon, xbacklight, xclip, xhost, xorg-fonts, xorg-minimal, xprop, w3m-img,
+            youtube-dl, zathura-pdf-mupdf]
 pkgs_ubuntu: [build-essential, lightdm-gtk-greeter, neovim-runtime, neovim, silversearcher-ag,
               simplescreenrecorder, texlive-lang-italian, texlive-xetex, x11-apps]
 pkgs_python: [pynvim]

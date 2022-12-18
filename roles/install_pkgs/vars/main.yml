@@ -6,13 +6,13 @@ pkgs_common: [acpi, ansible, bash, clang, cmake, ctags, curl, docker,
               qutebrowser, ranger, rofi, shellcheck, scrot, strace, tmux, wget,
               xfce4-terminal, zathura]
 pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen,
-            font-awesome, fzf, gtk-theme-united-gnome, i3-gaps, jsoncpp-devel
-            lightdm-gtk3-greeter, man-pages-devel, man-pages-posix, neovim,
-            network-manager-applet, nodejs, openssl-devel, python3-jedi,
-            python3-tmuxp, recordmydesktop, setxkbmap, telegram-desktop,
-            texlive-XeTeX, the_silver_searcher, volumeicon, xbacklight, xclip,
-            xhost, xorg-fonts, xorg-minimal, xprop, w3m-img, youtube-dl,
-            zathura-pdf-mupdf]
+            boost-devel, font-awesome, fzf, gtk-theme-united-gnome, i3-gaps,
+            jsoncpp-devel, lightdm-gtk3-greeter, man-pages-devel,
+            man-pages-posix, neovim, network-manager-applet, nodejs,
+            openssl-devel, python3-jedi, python3-tmuxp, recordmydesktop,
+            setxkbmap, telegram-desktop, texlive-XeTeX, the_silver_searcher,
+            volumeicon, xbacklight, xclip, xhost, xorg-fonts, xorg-minimal,
+            xprop, w3m-img, youtube-dl, zathura-pdf-mupdf]
 pkgs_ubuntu: [build-essential, lightdm-gtk-greeter, neovim-runtime, neovim,
               silversearcher-ag, simplescreenrecorder, texlive-lang-italian,
               texlive-xetex, x11-apps]

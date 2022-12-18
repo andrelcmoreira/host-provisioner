@@ -18,14 +18,5 @@
     scope: global
     value: alcm99@gmail.com
 
-- name: Run void tasks
-  import_tasks: os/void.yml
-  when: ansible_distribution == "Void" or ansible_distribution == "void"
-
-- name: Run ubuntu tasks
-  import_tasks: os/ubuntu.yml
-  when: ansible_distribution == "Ubuntu"
-
 # TODO: clone via ssh
-# TODO: clone other repos
 ...

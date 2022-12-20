@@ -4,7 +4,7 @@
   git:
     repo: "https://github.com/carvalhudo/configs.git"
     dest: "{{ ansible_env.HOME }}/dev/projects/configs"
-    version: ubuntu
+    version: debian
     force: yes
 
 ...

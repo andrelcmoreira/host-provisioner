@@ -13,11 +13,11 @@
     name: "{{ pkgs_common }}"
     state: present
 
-- name: Install ubuntu packages
+- name: Install debian packages
   become: true
   become_user: root
   apt:
-    name: "{{ pkgs_ubuntu }}"
+    name: "{{ pkgs_debian }}"
     state: present
 
 ...

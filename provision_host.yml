@@ -1,7 +1,7 @@
 ---
 
 - name: Provision host
-  hosts: void_netbook
+  hosts: all
   roles:
     - setup_home
     - install_pkgs

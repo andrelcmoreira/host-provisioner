@@ -32,6 +32,4 @@
     dest: "/var/service/docker"
     state: link
 
-# TODO: enable notifications service
-
 ...

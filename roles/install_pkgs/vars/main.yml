@@ -16,8 +16,8 @@ pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen,
             virtualbox-ose, w3m-img, youtube-dl, zathura-pdf-mupdf]
 pkgs_debian: [build-essential, exuberant-ctags, firefox-esr,
               lightdm-gtk-greeter, neovim-runtime, neovim, nodejs,
-              silversearcher-ag, simplescreenrecorder, texlive-lang-italian,
-              texlive-xetex, x11-apps]
+              silversearcher-ag, simplescreenrecorder, sudo,
+              texlive-lang-italian, texlive-xetex, x11-apps]
 pkgs_python: [pynvim]
 
 ...

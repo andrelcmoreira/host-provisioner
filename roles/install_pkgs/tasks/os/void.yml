@@ -1,5 +1,12 @@
 ---
 
+- name: Enable nonfree repo
+  become: true
+  become_user: root
+  xbps:
+    name: void-repo-nonfree
+    state: present
+
 - name: Sync package database
   become: true
   become_user: root

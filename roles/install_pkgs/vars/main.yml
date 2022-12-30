@@ -15,10 +15,10 @@ pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen,
             xbacklight, xclip, xhost, xorg-fonts, xorg-minimal, xprop,
             virtualbox-ose, virtualbox-ose-dkms, virtualbox-ose-guest,
             virtualbox-ose-guest-dkms, w3m-img, youtube-dl, zathura-pdf-mupdf]
-pkgs_debian: [build-essential, exuberant-ctags, firefox-esr,
+pkgs_debian: [build-essential, exuberant-ctags, firefox-esr, fonts-font-awesome,
               lightdm-gtk-greeter, neovim-runtime, neovim, nodejs,
               silversearcher-ag, simplescreenrecorder, sudo,
-              texlive-lang-italian, texlive-xetex, x11-apps]
+              texlive-lang-italian, texlive-xetex, x11-apps, volumeicon-alsa]
 pkgs_python: [pynvim]
 
 ...

@@ -7,6 +7,13 @@
     name: void-repo-nonfree
     state: present
 
+- name: Enable multilib repo
+  become: true
+  become_user: root
+  xbps:
+    name: void-repo-multilib
+    state: present
+
 - name: Sync package database
   become: true
   become_user: root

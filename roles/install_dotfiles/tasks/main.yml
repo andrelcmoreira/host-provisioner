@@ -76,6 +76,7 @@
   loop:
     - config.py
     - quickmarks
+    - bookmarks/urls
 
 - name: Deploy rofi config
   file:

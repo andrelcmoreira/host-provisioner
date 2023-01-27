@@ -69,6 +69,12 @@
     state: directory
     mode: '0700'
 
+- name: Creating qutebrowser bookmarks directory
+  file:
+    path: "{{ ansible_env.HOME }}/.config/qutebrowser/bookmarks"
+    state: directory
+    mode: '0700'
+
 - name: Creating ranger config directory
   file:
     path: "{{ ansible_env.HOME }}/.config/ranger"

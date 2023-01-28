@@ -14,6 +14,14 @@
     name: void-repo-multilib
     state: present
 
+- name: Set repo mirror
+  become: true
+  become_user: root
+  shell: "{{ item }}"
+  loop:
+    - cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
+    - sed -i "s|repo-default.voidlinux.org/|voidlinux.com.br/repo/|g" /etc/xbps.d/*.conf
+
 - name: Sync package database
   become: true
   become_user: root

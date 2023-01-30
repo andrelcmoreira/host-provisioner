@@ -32,4 +32,12 @@
     dest: "/var/service/docker"
     state: link
 
+- name: Enable alsa service
+  become: true
+  become_user: root
+  file:
+    src: "/etc/sv/alsa"
+    dest: "/var/service/alsa"
+    state: link
+
 ...

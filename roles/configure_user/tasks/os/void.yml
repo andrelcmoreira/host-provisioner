@@ -5,8 +5,9 @@
   become_user: root
   shell: usermod -aG {{ item }} {{ ansible_env.USER }}
   loop:
-    - network
+    - audio
     - docker
+    - network
 
 # TODO: add user to sudoers file
 

@@ -12,7 +12,7 @@ pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen,
             man-pages-posix, neovim, network-manager-applet, nodejs, notify-osd,
             openssl-devel, python3-jedi, python3-tmuxp, recordmydesktop,
             setxkbmap, steam, telegram-desktop, texlive-XeTeX,
-            the_silver_searcher, volumeicon, xbacklight, xclip, xhost,
+            the_silver_searcher, unrar, volumeicon, xbacklight, xclip, xhost,
             xorg-fonts, xorg-minimal, xprop, virtualbox-ose,
             virtualbox-ose-dkms, virtualbox-ose-guest,
             virtualbox-ose-guest-dkms, w3m-img, youtube-dl, zathura-pdf-mupdf]

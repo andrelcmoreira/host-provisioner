@@ -1,10 +1,11 @@
 ---
 
 pkgs_common: [acpi, ansible, bash, clang, cmake, curl, docker,
-              docker-compose, evince, gimp, git, htop, i3blocks, kicad, lightdm,
-              mpv, neofetch, newsboat, nitrogen, pandoc, python3-pip,
-              python3-virtualenv, qutebrowser, ranger, rofi, shellcheck, scrot,
-              strace, tmux, wget, wkhtmltopdf, xfce4-terminal, zathura]
+              docker-compose, evince, gimp, git, gnome-calculator, htop,
+              i3blocks, kicad, lightdm, mpv, neofetch, newsboat, nitrogen,
+              pandoc, python3-pip, python3-virtualenv, qutebrowser, ranger,
+              rofi, shellcheck, scrot, strace, tmux, wget, wkhtmltopdf,
+              xfce4-terminal, zathura]
 pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen,
             boost-devel, ctags, firefox, font-awesome, fzf, glibc-32bit, glow,
             gtk-theme-united-gnome, i3-gaps, jsoncpp-devel, libdrm-32bit,

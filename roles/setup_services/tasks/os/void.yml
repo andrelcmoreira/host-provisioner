@@ -40,4 +40,15 @@
     dest: "/var/service/alsa"
     state: link
 
+- name: Enable logging service
+  become: true
+  become_user: root
+  file:
+    src: "/etc/sv/{{ item }}"
+    dest: "/var/service/{{ item }}"
+    state: link
+  loop:
+    - socklog-unix
+    - nanoklogd
+
 ...

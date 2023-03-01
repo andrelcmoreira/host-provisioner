@@ -9,6 +9,16 @@
     - docker
     - network
 
+- name: Set default user shell
+  become: true
+  become_user: root
+  user:
+    name: "{{ item }}"
+    shell: /bin/bash
+    loop:
+      - "{{ ansible_env.USER }}"
+      - root
+
 # TODO: add user to sudoers file
 
 ...

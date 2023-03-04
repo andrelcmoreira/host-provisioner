@@ -7,7 +7,7 @@ pkgs_common: [acpi, ansible, bash, clang, cmake, curl, docker,
               rofi, shellcheck, scrot, strace, tmux, wget, wkhtmltopdf,
               xfce4-terminal, zathura]
 pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen,
-            boost-devel, ctags, firefox, font-awesome, fzf, glibc-32bit, glow,
+            boost-devel, ctags, firefox, font-awesome, fzf, gdb, glibc-32bit,
             gtk-theme-united-gnome, i3-gaps, jsoncpp-devel, libdrm-32bit,
             libglvnd-32bit, lightdm-gtk3-greeter, man-pages-devel,
             man-pages-posix, neovim, network-manager-applet, nodejs, notify-osd,

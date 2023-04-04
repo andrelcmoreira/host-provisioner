@@ -16,7 +16,7 @@
   git_config:
     name: user.email
     scope: global
-    value: alcm99@gmail.com
+    value: andrelcmoreira@disroot.com
 
 # TODO: clone via ssh
 ...

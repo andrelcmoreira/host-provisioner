@@ -15,9 +15,9 @@
   user:
     name: "{{ item }}"
     shell: /bin/bash
-    loop:
-      - "{{ ansible_env.USER }}"
-      - root
+  loop:
+    - "{{ ansible_env.USER }}"
+    - root
 
 # TODO: add user to sudoers file
 

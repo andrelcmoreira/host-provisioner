@@ -229,5 +229,6 @@
     group: "{{ ansible_env.USER }}"
     state: link
     mode: '755'
+    force: yes
 
 ...

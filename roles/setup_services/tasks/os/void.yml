@@ -51,4 +51,12 @@
     - socklog-unix
     - nanoklogd
 
+- name: Enable cron service
+  become: true
+  become_user: root
+  file:
+    src: "/etc/sv/cronie"
+    dest: "/var/service/cronie"
+    state: link
+
 ...

@@ -16,7 +16,7 @@ pkgs_void: [adwaita-plus, alsa-utils, base-devel, bash-completion,
             telegram-desktop, texlive-XeTeX, the_silver_searcher, unrar,
             volumeicon, xbacklight, xclip, xhost, xorg-fonts, xorg-minimal,
             xprop, virtualbox-ose, virtualbox-ose-dkms, virtualbox-ose-guest,
-            virtualbox-ose-guest-dkms, w3m-img, youtube-dl, zathura-pdf-mupdf]
+            virtualbox-ose-guest-dkms, w3m-img, yt-dlp, zathura-pdf-mupdf]
 pkgs_debian: [build-essential, exuberant-ctags, firefox-esr, fonts-font-awesome,
               lightdm-gtk-greeter, neovim-runtime, neovim, nodejs,
               silversearcher-ag, simplescreenrecorder, sudo,

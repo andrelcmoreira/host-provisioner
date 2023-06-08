@@ -73,6 +73,7 @@
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
+    force: yes
   loop:
     - config.py
     - quickmarks
@@ -223,8 +224,8 @@
 
 - name: Deploy volumeicon config
   file:
-    src: "{{ dotfiles_path }}/volumeicon"
-    dest: "{{ ansible_env.HOME }}/.config/volumeicon"
+    src: "{{ dotfiles_path }}/volumeicon/volumeicon"
+    dest: "{{ ansible_env.HOME }}/.config/volumeicon/volumeicon"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link

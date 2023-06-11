@@ -20,7 +20,7 @@
   shell: "{{ item }}"
   loop:
     - cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
-    - sed -i "s|repo-default.voidlinux.org/|voidlinux.com.br/repo/|g" /etc/xbps.d/*.conf
+    - sed -i "s|repo-default.voidlinux.org/|repo-fastly.voidlinux.org/|g" /etc/xbps.d/*.conf
 
 - name: Sync package database
   become: true

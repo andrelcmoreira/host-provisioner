@@ -24,7 +24,7 @@
     group: "{{ ansible_env.USER }}"
     state: link
   loop:
-    - init.vim
+    - init.lua
     - colors/zenburn.vim
 
 - name: Deploy i3 config

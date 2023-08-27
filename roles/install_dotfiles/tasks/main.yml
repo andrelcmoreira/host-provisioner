@@ -213,15 +213,6 @@
     state: link
     mode: '755'
 
-- name: Deploy betterlockscreen config
-  file:
-    src: "{{ dotfiles_path }}/betterlockscreen"
-    dest: "{{ ansible_env.HOME }}/.cache/betterlockscreen"
-    owner: "{{ ansible_env.USER }}"
-    group: "{{ ansible_env.USER }}"
-    state: link
-    mode: '755'
-
 - name: Deploy volumeicon config
   file:
     src: "{{ dotfiles_path }}/volumeicon/volumeicon"

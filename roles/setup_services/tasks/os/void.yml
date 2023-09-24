@@ -59,4 +59,16 @@
     dest: "/var/service/cronie"
     state: link
 
+- name: Enable virtualization services
+  become: true
+  become_user: root
+  file:
+    src: "/etc/sv/{{ item }}"
+    dest: "/var/service/{{ item }}"
+    state: link
+  loop:
+    - virtlogd
+    - virtlockd
+    - libvirtd
+
 ...

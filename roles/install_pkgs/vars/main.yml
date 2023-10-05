@@ -2,7 +2,7 @@
 
 pkgs_common: [acpi, ansible, bash, clang, cmake, curl, docker,
               docker-compose, evince, gimp, git, gnome-calculator, htop,
-              i3blocks, jq, kicad, lightdm, mpv, neofetch, newsboat, nitrogen,
+              i3blocks, jq, kicad, mpv, neofetch, newsboat, nitrogen,
               pandoc, pass, python3-pip, python3-virtualenv, qutebrowser,
               ranger, rofi, shellcheck, scrot, strace, tmux, tree, wget,
               wkhtmltopdf, xfce4-terminal, zathura]
@@ -10,9 +10,9 @@ pkgs_void: [adwaita-plus, alsa-utils, base-devel, bash-completion,
             betterlockscreen, boost-devel, cronie, ctags, firefox, font-awesome,
             fzf, gdb, glibc-32bit, gtk-theme-united-gnome, i3-gaps,
             jsoncpp-devel, libdrm-32bit, libglvnd-32bit, lightdm-gtk3-greeter,
-            man-pages-devel, man-pages-posix, neovim, network-manager-applet,
+            lightdm, man-pages-devel, man-pages-posix, neovim, network-manager-applet,
             nextcloud-client, nodejs, notify-osd, openssl-devel, python3-jedi,
-            python3-tmuxp, qemu, recordmydesktop, ripgrep, setxkbmap,
+            python3-tmuxp, qemu, recordmydesktop, ripgrep, rustup, setxkbmap,
             socklog-void, steam, telegram-desktop, texlive-XeTeX, unrar,
             volumeicon, xbacklight, xclip, xhost, xorg-fonts, xorg-minimal,
             xprop, virt-manager, w3m-img, yt-dlp, zathura-pdf-mupdf]
@@ -21,5 +21,6 @@ pkgs_debian: [build-essential, exuberant-ctags, firefox-esr, fonts-font-awesome,
               silversearcher-ag, simplescreenrecorder, sudo,
               texlive-lang-italian, texlive-xetex, x11-apps, volumeicon-alsa]
 pkgs_python: [pynvim]
+# pkgs_rust: [rls, rls-analyzer, rust-src]
 
 ...

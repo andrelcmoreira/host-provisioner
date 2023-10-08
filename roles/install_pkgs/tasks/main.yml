@@ -12,4 +12,7 @@
   pip:
     name: "{{ pkgs_python }}"
 
+- name: Install rust packages
+  shell: rustup-init -y -c "{{ pkgs_rust }}"
+
 ...

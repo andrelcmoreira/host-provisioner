@@ -2,7 +2,7 @@
 
 - name: Clone configs repo
   git:
-    repo: "https://github.com/carvalhudo/configs.git"
+    repo: "https://github.com/andrelcmoreira/configs.git"
     dest: "{{ ansible_env.HOME }}/dev/projects/configs"
     version: debian
     force: yes

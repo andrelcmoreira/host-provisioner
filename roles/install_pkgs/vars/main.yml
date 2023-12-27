@@ -22,7 +22,6 @@ pkgs_debian: [build-essential, exuberant-ctags, firefox-esr, fonts-font-awesome,
               lightdm-gtk-greeter, neovim-runtime, neovim, nodejs,
               silversearcher-ag, simplescreenrecorder, sudo,
               texlive-lang-italian, texlive-xetex, x11-apps, volumeicon-alsa]
-pkgs_python: [pynvim]
 pkgs_rust: [rls, rls-analyzer, rust-src]
 
 ...

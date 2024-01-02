@@ -16,7 +16,7 @@ pkgs_void: [adwaita-plus, alsa-utils, base-devel, bash-completion,
             nodejs, notify-osd, openssl-devel, python3-jedi, python3-neovim,
             python3-tmuxp, qemu, recordmydesktop, ripgrep, rustup, setxkbmap,
             socklog-void, steam, telegram-desktop, texlive-XeTeX, unrar,
-            volumeicon, xbacklight, xclip, xf86-video-nouveau, xhost,
+            volumeicon, xbacklight, xclip, xfburn, xf86-video-nouveau, xhost,
             xorg-fonts, xorg-minimal, xprop, virt-manager, w3m-img, yt-dlp,
             zathura-pdf-mupdf]
 pkgs_debian: [build-essential, exuberant-ctags, firefox-esr, fonts-font-awesome,

@@ -18,7 +18,7 @@ pkgs_void: [adwaita-plus, alsa-utils, base-devel, bash-completion,
             recordmydesktop, ripgrep, rustup, setxkbmap, socklog-void, steam,
             telegram-desktop, texlive-XeTeX, unrar, volumeicon, xbacklight,
             xclip, xfburn, xf86-video-nouveau, xhost, xorg-fonts, xorg-minimal,
-            xprop, virt-manager, w3m-img, yt-dlp, zathura-pdf-mupdf]
+            xprop, xtools, virt-manager, w3m-img, yt-dlp, zathura-pdf-mupdf]
 pkgs_debian: [build-essential, exuberant-ctags, firefox-esr, fonts-font-awesome,
               lightdm-gtk-greeter, neovim-runtime, neovim, nodejs,
               silversearcher-ag, simplescreenrecorder, sudo,

@@ -15,5 +15,6 @@
     - coc-clangd
     - coc-jedi
     - coc-rust-analyzer
+    - "@yaegassy/coc-mypy"
 
 ...

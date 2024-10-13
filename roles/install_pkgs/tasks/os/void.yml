@@ -42,4 +42,7 @@
     name: "{{ pkgs_void }}"
     state: present
 
+- name: Install rust packages
+  shell: rustup-init -y -c "{{ pkgs_rust }}"
+
 ...

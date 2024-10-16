@@ -8,7 +8,6 @@
     - audio
     - docker
     - network
-    - libvirt
 
 - name: Set default user shell
   become: true

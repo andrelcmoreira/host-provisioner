@@ -159,11 +159,14 @@
   become_user: root
   copy:
     remote_src: yes
-    src: "{{ dotfiles_path }}/lightdm/lightdm-gtk-greeter.conf"
-    dest: "/etc/lightdm/lightdm-gtk-greeter.conf"
+    src: "{{ dotfiles_path }}/lightdm/{{ item }}"
+    dest: "/etc/lightdm/{{ item }}"
     owner: root
     group: root
     force: yes
+  loop:
+    - lightdm.conf
+    - lightdm-gtk-greeter.conf
 
 - name: Deploy resources
   file:

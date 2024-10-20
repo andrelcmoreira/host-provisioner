@@ -2,11 +2,11 @@
 
 pkgs_common: [acpi, ansible, bash, clang, cmake, curl, docker,
               docker-compose, evince, fzf, gdb, gimp, git, gnome-calculator,
-              hexedit, htop, i3blocks, jq, kicad, lightdm, mpv, neofetch, neovim,
-              newsboat, nitrogen, pandoc, pass, python3-pip, python3-virtualenv,
-              qutebrowser, ranger, recordmydesktop, rofi, ripgrep, shellcheck,
-              scrot, strace, telegram-desktop, tmux, tree, wget, wkhtmltopdf,
-              xfburn, xfce4-terminal, yt-dlp, zathura]
+              hexedit, htop, i3blocks, jq, kicad, lightdm, mpv, neofetch,
+              neovim, newsboat, nitrogen, pandoc, pass, python3-pip,
+              python3-virtualenv, qutebrowser, ranger, recordmydesktop, rofi,
+              ripgrep, shellcheck, scrot, strace, telegram-desktop, tmux, tree,
+              wget, wkhtmltopdf, xfburn, xfce4-terminal, yt-dlp, zathura]
 pkgs_void: [adwaita-plus, alsa-utils, base-devel, bash-completion,
             betterlockscreen, boost-devel, clang-tools-extra, cronie, ctags,
             firefox, font-awesome, glibc-32bit, gtk-theme-united-gnome, i3-gaps,
@@ -21,8 +21,9 @@ pkgs_void: [adwaita-plus, alsa-utils, base-devel, bash-completion,
             xf86-video-nouveau, xhost, xorg-fonts, xorg-minimal, xprop, xtools,
             w3m-img, zathura-pdf-mupdf]
 pkgs_debian: [build-essential, exuberant-ctags, firefox-esr, fonts-font-awesome,
-              lightdm-gtk-greeter, neovim-runtime, nodejs, sudo,
-              texlive-lang-italian, texlive-xetex, x11-apps, volumeicon-alsa]
+              lightdm-gtk-greeter, neovim-runtime, nodejs,
+              network-manager-gnome, sudo, texlive-lang-italian, texlive-xetex,
+              x11-apps, volumeicon-alsa]
 pkgs_rust: [rls, rls-analyzer, rust-src, rust-analyzer]
 
 ...

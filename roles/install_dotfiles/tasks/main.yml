@@ -135,15 +135,6 @@
     group: "{{ ansible_env.USER }}"
     state: link
 
-- name: Deploy .profile config
-  file:
-    src: "{{ dotfiles_path }}/system/.profile"
-    dest: "{{ ansible_env.HOME }}/.profile"
-    owner: "{{ ansible_env.USER }}"
-    group: "{{ ansible_env.USER }}"
-    state: link
-    force: yes
-
 - name: Deploy zathura config
   file:
     src: "{{ dotfiles_path }}/zathura/zathurarc"

@@ -7,4 +7,13 @@
     version: debian
     force: yes
 
+- name: Deploy .xsession config
+  file:
+    src: "{{ dotfiles_path }}/system/.xsession"
+    dest: "{{ ansible_env.HOME }}/.xsession"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
+    state: link
+    force: yes
+
 ...

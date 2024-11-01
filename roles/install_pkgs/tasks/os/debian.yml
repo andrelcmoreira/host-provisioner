@@ -1,5 +1,7 @@
 ---
 
+# TODO: enable unstable packages
+
 - name: Sync package database
   become: true
   become_user: root

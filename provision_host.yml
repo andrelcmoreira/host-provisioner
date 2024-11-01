@@ -1,7 +1,9 @@
 ---
 
+# TODO: deploy keybase keys
+
 - name: Provision host
-  hosts: all
+  hosts: debian_vm_vb
   roles:
     - setup_home
     - install_pkgs

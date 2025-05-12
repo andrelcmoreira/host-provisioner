@@ -13,7 +13,7 @@
   shell: nvim -c 'CocInstall -sync {{ item }} | q | q'
   loop:
     - coc-clangd
-    - coc-jedi
+    - coc-pyright
     - coc-rust-analyzer
     - "@yaegassy/coc-mypy"
 

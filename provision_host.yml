@@ -1,6 +1,7 @@
 ---
 
 # TODO: deploy keybase keys
+# TODO: pulseaudio
 
 - name: Provision host
   hosts: debian_vm_vb

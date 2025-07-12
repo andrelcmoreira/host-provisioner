@@ -1,9 +1,9 @@
 ---
 
-- name: Clone configs repo
+- name: Clone dotfiles repo
   git:
-    repo: "https://github.com/andrelcmoreira/configs.git"
-    dest: "{{ ansible_env.HOME }}/dev/projects/configs"
+    repo: "https://github.com/andrelcmoreira/dotfiles.git"
+    dest: "{{ ansible_env.HOME }}/dev/projects/dotfiles"
     version: debian
     force: yes
 

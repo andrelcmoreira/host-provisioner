@@ -1,5 +1,5 @@
 ---
 
-dotfiles_path: "{{ ansible_env.HOME }}/dev/projects/configs"
+dotfiles_path: "{{ ansible_env.HOME }}/dev/projects/dotfiles"
 
 ...

@@ -4,7 +4,7 @@
 
 ## Overview
 
-The ```host-provisioner``` project consists of an ansible playbook targeted to automate the full configuration of my fresh linux-like distro installation. The deployied configuration is available at [configs](https://github.com/andrelcmoreira/configs) repo. The playbook is responsible for:
+The ```host-provisioner``` project consists of an ansible playbook targeted to automate the full configuration of my fresh linux-like distro installation. The deployied configuration is available at [dotfiles](https://github.com/andrelcmoreira/dotfiles) repo. The playbook is responsible for:
 
 - package installing
 - dotfiles deployment

@@ -1,19 +1,19 @@
 ---
 
-pkgs_common: [acpi, ansible, bash, clang, cmake, curl, docker,
+pkgs_common: [acpi, ansible, alicritty, clang, cmake, curl, docker,
               docker-compose, evince, fzf, gdb, gimp, git, gnome-calculator,
               hexedit, htop, i3blocks, jq, kicad, lightdm, mpv, neofetch,
               neovim, newsboat, nitrogen, pandoc, pass, python3-neovim,
               python3-pip, python3-virtualenv, qutebrowser, ranger,
               recordmydesktop, rofi, ripgrep, shellcheck, scrot, strace,
-              telegram-desktop, tmux, tree, wget, wkhtmltopdf, xfburn,
-              xfce4-terminal, yt-dlp, zathura]
-pkgs_void: [adwaita-plus, alsa-utils, base-devel, bash-completion,
-            betterlockscreen, boost-devel, clang-tools-extra, cronie, firefox,
-            ffmpeg, font-awesome, glibc-32bit, gtk-theme-united-gnome, i3-gaps,
-            jsoncpp-devel, keybase, kicad-footprints, kicad-library,
-            kicad-packages3D, kicad-symbols, libdrm-32bit, libglvnd-32bit,
-            lightdm-gtk3-greeter, man-pages-devel, man-pages-posix, nerd-fonts,
+              telegram-desktop, tmux, tree, wget, wkhtmltopdf, xfburn, yt-dlp,
+              zathura, zsh]
+pkgs_void: [adwaita-plus, alsa-utils, base-devel, betterlockscreen, boost-devel,
+            clang-tools-extra, cronie, firefox, ffmpeg, font-awesome,
+            glibc-32bit, gtk-theme-united-gnome, i3-gaps, jsoncpp-devel,
+            keybase, kicad-footprints, kicad-library, kicad-packages3D,
+            kicad-symbols, libdrm-32bit, libglvnd-32bit, lightdm-gtk3-greeter,
+            man-pages-devel, man-pages-posix, nerd-fonts,
             network-manager-applet, nextcloud-client, nodejs, notify-osd,
             openssl-devel, pavucontrol, pdf.js, python3-magic, python3-pylint,
             python3-tmuxp, pa-applet, rustup, setxkbmap, socklog-void,

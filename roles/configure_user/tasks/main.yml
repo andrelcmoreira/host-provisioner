@@ -13,7 +13,7 @@
   become_user: root
   user:
     name: "{{ item }}"
-    shell: /bin/bash
+    shell: /bin/zsh
   loop:
     - "{{ ansible_env.USER }}"
     - root

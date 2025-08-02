@@ -115,17 +115,17 @@
     - bg-saved.cfg
     - nitrogen.cfg
 
-- name: Deploy bash config
+- name: Deploy zsh config
   file:
-    src: "{{ dotfiles_path }}/bash/{{ item }}"
+    src: "{{ dotfiles_path }}/zsh/{{ item }}"
     dest: "{{ ansible_env.HOME }}/{{ item }}"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
     state: link
     force: yes
   loop:
-    - .bash_aliases
-    - .bashrc
+    - .zsh_aliases
+    - .zshrc
 
 - name: Deploy .env config
   file:

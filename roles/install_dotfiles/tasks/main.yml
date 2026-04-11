@@ -78,6 +78,7 @@
     - config.py
     - quickmarks
     - bookmarks/urls
+    - themes/onedark.py
 
 - name: Deploy rofi config
   file:

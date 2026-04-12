@@ -54,6 +54,7 @@
   loop:
     - config
     - urls
+    - plugins
 
 - name: Deploy ranger config
   file:
